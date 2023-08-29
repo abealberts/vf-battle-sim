@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Vagrant's Flame Battle Simulator</title>
+        <link rel="stylesheet" href="./style.css">
+        <link rel="icon" href="./Assets/favicon.ico" type="image/x-icon">
+    </head>
+
+    <body>
+
+        <header>
+            <img class="headerlogo" src="./Assets/headerlogo.png" alt="Vagrant's Flame Header Logo">
+            <h1 class="headertitle">Battle Simulator</h1>
+        </header>
+
+        <main>
+
+            <div class="row">
+                <div class="column">
+                    <h2>Equipment</h2>
+                        <label for="head">Head:</label>
+                        <select name="head" id="head">
+                            <option value="mage-hood">Mage Hood</option>
+                            <option value="thief-cap">Thief Cap</option>
+                            <option value="rune-med">Rune Med Helm</option>
+                        </select>
+
+                        <label for="body">Body:</label>
+                        <select name="body" id="body">
+                            <option value="mage-robe">Mage Robe</option>
+                            <option value="leather-tunic">Leather Tunic</option>
+                            <option value="rune-chain">Rune Chainbody</option>
+                        </select>
+                        
+                        <label for="legs">Legs:</label>
+                        <select name="legs" id="legs">
+                            <option value="mage-bottoms">Mage Bottoms</option>
+                            <option value="leather-chaps">Leather Chaps</option>
+                            <option value="rune-legs">Rune Platelegs</option>
+                        </select>
+
+                        <label for="main-hand">Main Hand:</label>
+                        <select name="main-hand" id="main-hand">
+                            <option value="mage-wand">Mage's Wand</option>
+                            <option value="knives">Throwing Knives</option>
+                            <option value="magic-dagger">Magic Dagger</option>
+                        </select>
+
+                        <label for="off-hand">Off Hand:</label>
+                        <select name="off-hand" id="off-hand">
+                            <option value="spellbook">Scholar's Spellbook</option>
+                            <option value="parry-dagger">Parrying Dagger</option>
+                            <option value="shield">Leather Buckler</option>
+                        </select>
+
+                        <label for="ring">Ring:</label>
+                        <select name="ring" id="ring">
+                            <option value="magic-ring">Enchanted Ring</option>
+                            <option value="defence-ring">Ring of Stone</option>
+                            <option value="dodge-ring">Ring of Stealth</option>
+                        </select>
+
+                        <label for="amulet">Amulet:</label>
+                        <select name="amulet" id="amulet">
+                            <option value="attack-amulet">Amulet of Fury</option>
+                            <option value="magic-amulet">Shard of the Flame</option>
+                            <option value="tank amulet">Eye of Danudor</option>
+                        </select>
+                </div>
+
+                <div class="column">
+                    <h2>Player Stats</h2>
+                    <ul>
+                        <li>HP:</li>
+                        <li>Attack:</li>
+                        <li>Magic Attack:</li>
+                        <li>Defense:</li>
+                        <li>Magic Defense:</li>
+                        <li>Crit Rate:</li>
+                        <li>Dodge:</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div>
+                <h2>Battle</h2>
+                <div class="column">
+                    <h3>Player</h3>
+                </div>
+                <div class="column">
+                    <h3>Enemy</h3>
+                </div>
+            </div>
+
+        </main>
+
+        <script src="index.js"></script>
+
+    </body>
+</html>
