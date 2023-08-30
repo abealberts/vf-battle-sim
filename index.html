@@ -22,76 +22,88 @@
 
             <section id="equipment">
                 <div>
-                    <h3>Equipment</h3>
-                    <label for="head">Head:</label>
+                    <h3 class="sectionhead">Equipment</h3>
+                    <div class="content">
+                    <table style="width: auto;">
+                    <tr>
+                    <td><label for="head">Head:</label>
                     <select name="head" id="head">
                         <option value="empty">Empty</option>
                         <option value="mage-hood">Mage Hood</option>
                         <option value="thief-cap">Thief Cap</option>
                         <option value="rune-med">Rune Med Helm</option>
-                    </select>
+                    </select></td>
 
-                    <label for="body">Body:</label>
+                    <td><label for="body">Body:</label>
                     <select name="body" id="body">
                         <option value="empty">Empty</option>
                         <option value="mage-robe">Mage Robe</option>
                         <option value="leather-tunic">Leather Tunic</option>
                         <option value="rune-chain">Rune Chainbody</option>
-                    </select>
-                        
-                    <label for="legs">Legs:</label>
+                    </select></td>
+                    </tr>
+                    <tr>
+                    <td><label for="legs">Legs:</label>
                     <select name="legs" id="legs">
                         <option value="empty">Empty</option>
                         <option value="mage-bottoms">Mage Bottoms</option>
                         <option value="leather-chaps">Leather Chaps</option>
                         <option value="rune-legs">Rune Platelegs</option>
-                    </select>
+                    </select></td>
 
-                    <label for="main-hand">Main Hand:</label>
+                    <td><label for="main-hand">Main Hand:</label>
                     <select name="main-hand" id="main-hand">
                         <option value="empty">Empty</option>
                         <option value="mage-wand">Mage's Wand</option>
                         <option value="knives">Throwing Knives</option>
                         <option value="magic-dagger">Magic Dagger</option>
-                    </select>
-
-                    <label for="off-hand">Off Hand:</label>
+                    </select></td>
+                    </tr>
+                    
+                    <tr>
+                    <td><label for="off-hand">Off Hand:</label>
                     <select name="off-hand" id="off-hand">
                         <option value="empty">Empty</option>
                         <option value="spellbook">Scholar's Spellbook</option>
                         <option value="parry-dagger">Parrying Dagger</option>
                         <option value="shield">Leather Buckler</option>
-                    </select>
+                    </select></td>
 
-                    <label for="ring">Ring:</label>
+                    <td><label for="ring">Ring:</label>
                     <select name="ring" id="ring">
                         <option value="empty">Empty</option>
                         <option value="magic-ring">Enchanted Ring</option>
                         <option value="defence-ring">Ring of Stone</option>
                         <option value="dodge-ring">Ring of Stealth</option>
-                    </select>
-
-                    <label for="amulet">Amulet:</label>
+                    </select></td>
+                    </tr>
+                    <tr>
+                    <td><label for="amulet">Amulet:</label>
                     <select name="amulet" id="amulet">
                         <option value="empty">Empty</option>
                         <option value="attack-amulet">Amulet of Fury</option>
-                        <option value="magic-amulet">Shard of the Flame</option>
+                        <option value="magic-amulet">Essence of the Flame</option>
                         <option value="tank amulet">Eye of Danudor</option>
-                    </select>
+                    </select></td>
+                    </tr>
+                </table>
+                </div>
                 </div>
             </section>
 
             <section id="stats">
                 <div>
-                    <h3>Stats</h3>
-                    <p>HP: <span id="currentHp"></span>/<span id="maxHp"></span></p>    
-                    <p>Attack Power: <span id="damage"></span></p>
-                    <p>Magic Attack Power: <span id="damageM"></span></p>
-                    <p>Physical Defence: <span id="defence"></span></p>
-                    <p>Magic Defence: <span id="defenceM"></span></p>
-                    <p>Crit Rate: <span id="critChance"></span></p>
-                    <p>Dodge: <span id="dodgeChance"></span></p>
-                    <p>Gold: <span id="gold"></span></p>
+                    <h3 class="sectionhead">Stats</h3>
+                    <div class="content">
+                        <p>HP: <span id="currentHp"></span>/<span id="maxHp"></span></p>    
+                        <p>Attack Power: <span id="damage"></span></p>
+                        <p>Magic Attack Power: <span id="damageM"></span></p>
+                        <p>Physical Defence: <span id="defence"></span></p>
+                        <p>Magic Defence: <span id="defenceM"></span></p>
+                        <p>Crit Rate: <span id="critChance"></span></p>
+                        <p>Dodge: <span id="dodgeChance"></span></p>
+                        <p>Gold: <span id="gold"></span></p>
+                    </div>
                 </div>
 
             </section>
@@ -108,7 +120,7 @@
 
         </main>
 
-        <script src="index.js"></script>
+        <script src="main.js"></script>
 
     </body>
 </html>
