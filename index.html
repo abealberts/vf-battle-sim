@@ -1,126 +1,173 @@
 <!DOCTYPE html>
 
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Vagrant's Flame Battle Simulator</title>
+		<link rel="stylesheet" href="./style.css" />
+		<link rel="icon" href="./Assets/favicon.ico" type="image/x-icon" />
+	</head>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Vagrant's Flame Battle Simulator</title>
-        <link rel="stylesheet" href="./style.css">
-        <link rel="icon" href="./Assets/favicon.ico" type="image/x-icon">
-    </head>
+	<body>
 
-    <body>
+		<header>
 
-        <header>
-            <img class="headerlogo" src="./Assets/headerlogo.png" alt="Vagrant's Flame Header Logo">
-            <h1 class="headertitle">Battle Simulator</h1>
-        </header>
+			<img class="headerlogo" src="./Assets/headerlogo.png" alt="Vagrant's Flame Header Logo" />
 
-        <main>
+			<h1 class="headertitle">Battle Simulator</h1>
 
-            <section id="equipment">
-                <div>
-                    <h3 class="sectionhead">Equipment</h3>
-                    <div class="content">
-                    <table style="width: auto;">
-                    <tr>
-                    <td><label for="head">Head:</label>
-                    <select name="head" id="head">
-                        <option value="empty">Empty</option>
-                        <option value="mage-hood">Mage Hood</option>
-                        <option value="thief-cap">Thief Cap</option>
-                        <option value="rune-med">Rune Med Helm</option>
-                    </select></td>
+		</header>
 
-                    <td><label for="body">Body:</label>
-                    <select name="body" id="body">
-                        <option value="empty">Empty</option>
-                        <option value="mage-robe">Mage Robe</option>
-                        <option value="leather-tunic">Leather Tunic</option>
-                        <option value="rune-chain">Rune Chainbody</option>
-                    </select></td>
-                    </tr>
-                    <tr>
-                    <td><label for="legs">Legs:</label>
-                    <select name="legs" id="legs">
-                        <option value="empty">Empty</option>
-                        <option value="mage-bottoms">Mage Bottoms</option>
-                        <option value="leather-chaps">Leather Chaps</option>
-                        <option value="rune-legs">Rune Platelegs</option>
-                    </select></td>
+		<main>
 
-                    <td><label for="main-hand">Main Hand:</label>
-                    <select name="main-hand" id="main-hand">
-                        <option value="empty">Empty</option>
-                        <option value="mage-wand">Mage's Wand</option>
-                        <option value="knives">Throwing Knives</option>
-                        <option value="magic-dagger">Magic Dagger</option>
-                    </select></td>
-                    </tr>
-                    
-                    <tr>
-                    <td><label for="off-hand">Off Hand:</label>
-                    <select name="off-hand" id="off-hand">
-                        <option value="empty">Empty</option>
-                        <option value="spellbook">Scholar's Spellbook</option>
-                        <option value="parry-dagger">Parrying Dagger</option>
-                        <option value="shield">Leather Buckler</option>
-                    </select></td>
+            <!--EQUIPMENT & STATS SECTION-->
+			<section class="layout">
 
-                    <td><label for="ring">Ring:</label>
-                    <select name="ring" id="ring">
-                        <option value="empty">Empty</option>
-                        <option value="magic-ring">Enchanted Ring</option>
-                        <option value="defence-ring">Ring of Stone</option>
-                        <option value="dodge-ring">Ring of Stealth</option>
-                    </select></td>
-                    </tr>
-                    <tr>
-                    <td><label for="amulet">Amulet:</label>
-                    <select name="amulet" id="amulet">
-                        <option value="empty">Empty</option>
-                        <option value="attack-amulet">Amulet of Fury</option>
-                        <option value="magic-amulet">Essence of the Flame</option>
-                        <option value="tank amulet">Eye of Danudor</option>
-                    </select></td>
-                    </tr>
-                </table>
-                </div>
-                </div>
-            </section>
+                    <!--EQUIPMENT TABLE-->
+					<section id="equipment">
+							<h3 class="sectionhead">Equipment</h3>
 
-            <section id="stats">
-                <div>
-                    <h3 class="sectionhead">Stats</h3>
-                    <div class="content">
-                        <p>HP: <span id="currentHp"></span>/<span id="maxHp"></span></p>    
-                        <p>Attack Power: <span id="damage"></span></p>
-                        <p>Magic Attack Power: <span id="damageM"></span></p>
-                        <p>Physical Defence: <span id="defence"></span></p>
-                        <p>Magic Defence: <span id="defenceM"></span></p>
-                        <p>Crit Rate: <span id="critChance"></span></p>
-                        <p>Dodge: <span id="dodgeChance"></span></p>
-                        <p>Gold: <span id="gold"></span></p>
-                    </div>
-                </div>
+							<table class="equipment">
+								<tbody>
+									<tr>
+                                        <!--EMPTY SLOT-->
+										<td class="placeholder"><div class="square">&nbsp;x</div></td>
+										<td> <!--HEAD SLOT-->
+											<div class="square">
+											&nbsp;<label for="head">Head:</label>
+											<select name="head" class="custom-select" id="head">
+												<option value="empty">Empty</option>
+												<option value="mage-hood">Mage Hood</option>
+												<option value="thief-cap">Thief Cap</option>
+												<option value="rune-med">Rune Med Helm</option>
+											</select>
+											</div>
+										</td>
+                                        <!--EMPTY SLOT-->
+										<td class="placeholder"><div class="square">&nbsp;x</div></td>
+									</tr>
+									<tr>
+										<td> <!--MAIN HAND SLOT-->
+											<div class="square">
+											&nbsp;<label for="main-hand">Main Hand:</label>
+											<select name="main-hand" class="custom-select" id="main-hand">
+												<option value="empty">Empty</option>
+												<option value="mage-wand">Mage's Wand</option>
+												<option value="knives">Throwing Knives</option>
+												<option value="magic-dagger">Magic Dagger</option>
+											</select>
+											</div>
+										</td>
+										<td> <!--BODY SLOT-->
+											<div class="square">
+											&nbsp;<label for="body">Body:</label>
+											<select name="body" class="custom-select" id="body">
+												<option value="empty">Empty</option>
+												<option value="mage-robe">Mage Robe</option>
+												<option value="leather-tunic">Leather Tunic</option>
+												<option value="rune-chain">Rune Chainbody</option>
+											</select>
+											</div>
+										</td>
+										<td> <!--OFF HAND SLOT-->
+											<div class="square">
+											&nbsp;<label for="off-hand">Off Hand:</label>
+											<select name="off-hand" class="custom-select" id="off-hand">
+												<option value="empty">Empty</option>
+												<option value="spellbook">Scholar's Spellbook</option>
+												<option value="parry-dagger">Parrying Dagger</option>
+												<option value="shield">Leather Buckler</option>
+											</select>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td> <!--AMULET SLOT-->
+											<div class="square">
+											&nbsp;<label for="amulet">Amulet:</label>
+											<select name="amulet" class="custom-select" id="amulet">
+												<option value="empty">Empty</option>
+												<option value="attack-amulet">Amulet of Fury</option>
+												<option value="magic-amulet">Essence of the Flame</option>
+												<option value="tank amulet">Eye of Danudor</option>
+											</select>
+											</div>
+										</td>
+										<td> <!--LEGS SLOT-->
+											<div class="square">
+											&nbsp;<label for="legs">Legs:</label>
+											<select name="legs" class="custom-select" id="legs">
+												<option value="empty">Empty</option>
+												<option value="mage-bottoms">Mage Bottoms</option>
+												<option value="leather-chaps">Leather Chaps</option>
+												<option value="rune-legs">Rune Platelegs</option>
+											</select>
+											</div>
+										</td>
+										<td> <!--RING SLOT-->
+											<div class="square">
+											&nbsp;<label for="ring">Ring:</label>
+											<select name="ring" class="custom-select" id="ring">
+												<option value="empty">Empty</option>
+												<option value="magic-ring">Enchanted Ring</option>
+												<option value="defence-ring">Ring of Stone</option>
+												<option value="dodge-ring">Ring of Stealth</option>
+											</select>
+											</div>
+										</td>
+									</tr>
+									<tr> <!--EMPTY SLOTS-->
+										<td class="placeholder">&nbsp;x</td>
+										<td class="placeholder">&nbsp;x</td>
+										<td class="placeholder">&nbsp;x</td>
+									</tr>
+								</tbody>
+							</table>
+							<!-- DivTable.com -->
+					</section>
 
-            </section>
+                    <!--STATS LIST-->
+					<section class="stats">
+						<div>
+							<h3 class="sectionhead">Stats</h3>
 
-            <div>
-                <h2>Battle</h2>
-                <div class="column">
-                    <h3>Player</h3>
-                </div>
-                <div class="column">
-                    <h3>Enemy</h3>
-                </div>
-            </div>
+							<div class="content">
+								<p>HP: <span id="currentHp"></span>/<span id="maxHp"></span></p>
+								<p>Attack Power: <span id="damage"></span></p>
+								<p>Magic Attack Power: <span id="damageM"></span></p>
+								<p>Physical Defence: <span id="defence"></span></p>
+								<p>Magic Defence: <span id="defenceM"></span></p>
+								<p>Crit Rate: <span id="critChance"></span></p>
+								<p>Dodge: <span id="dodgeChance"></span></p>
+								<p>Gold: <span id="gold"></span></p>
+							</div>
+						</div>
+					</section>
+			</section>
 
-        </main>
 
-        <script src="main.js"></script>
+            <!--BATTLE SIMULATOR WILL GO IN THIS SECTION-->
+			<section class="battle">
+				<section class="layout">
+					<div>
+						<h3 class="sectionhead">Battle</h3>
 
-    </body>
+						<div class="column">
+							<h3 class="sectionhead">Player</h3>
+						</div>
+
+						<div class="column">
+							<h3 class="sectionhead">Enemy</h3>
+						</div>
+					</div>
+				</section>
+			</section>
+
+		</main>
+
+		<script src="./scripts/main.js"></script>
+
+	</body>
 </html>
