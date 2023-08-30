@@ -14,8 +14,9 @@
 
 		<header>
 
-			<img class="headerlogo" src="./Assets/headerlogo.png" alt="Vagrant's Flame Header Logo" />
-
+			<div id="headerLogoContainer">
+				<img class="headerlogo" src="./Assets/headerlogo.png" alt="Vagrant's Flame Header Logo" />
+			</div>
 			<h1 class="headertitle">Battle Simulator</h1>
 
 		</header>
@@ -130,7 +131,7 @@
 
                     <!--STATS LIST-->
 					<section class="stats">
-						<div>
+						
 							<h3 class="sectionhead">Stats</h3>
 
 							<div class="content">
@@ -143,31 +144,53 @@
 								<p>Dodge: <span id="dodgeChance"></span></p>
 								<p>Gold: <span id="gold"></span></p>
 							</div>
-						</div>
 					</section>
 			</section>
 
-
             <!--BATTLE SIMULATOR WILL GO IN THIS SECTION-->
-			<section class="battle">
-				<section class="layout">
+			<section class="layout" id="battlezone">
+
+				<h3 class="sectionhead" id="battle">Battle</h3>
+
+				<section>
+					<h3 class="sectionhead" id="player">Player</h3>
+
 					<div>
-						<h3 class="sectionhead">Battle</h3>
-
-						<div class="column">
-							<h3 class="sectionhead">Player</h3>
-						</div>
-
-						<div class="column">
-							<h3 class="sectionhead">Enemy</h3>
-						</div>
+						<p>HP: <span id="battleHpCurrent"></span>/<span id="battleHpMax"></span></p>
 					</div>
 				</section>
+
+				<section>
+					<h3 class="sectionhead" id="actions">Actions</h3>
+
+					<div id="buttonContainer">
+					<button type="button">ATTACK</button>
+					<button type="button">DEFEND</button>
+					<button type="button">DODGE</button>
+					</div>
+
+				</section>
+
+				<section>
+					<h3 class="sectionhead" id="enemy">Enemy</h3>
+
+					<div>
+						<p>HP: <span id="enemyCurrentHp"></span>/<span id="enemyMaxHp"></span></p>
+					</div>
+				</section>
+
 			</section>
 
 		</main>
 
+		<footer>
+			<div id="creditsContainer">
+				<p id="credits">created by: abe alberts | &copy; 2023 disadventure.co</p>
+			</div>
+		</footer>
+
 		<script src="./scripts/main.js"></script>
 
 	</body>
+
 </html>
