@@ -22,5 +22,38 @@ h1{
     margin-right: auto;
     margin-top: -2px;
     font-family: monospace;
-    font-weight: lighter;
+    font-weight: heavy;
+}
+
+.sectionhead{
+    padding: 8px;
+    width: 80%;
+    margin: 12px auto;
+    text-align: left;
+    color: white;
+    background-color: black;
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+    box-shadow: 3px 3px 0px 6px black;
+    font-family: monospace;
+    font-size:x-large;
+}
+
+.content{
+    padding: 8px;
+    margin: 12px auto;
+    width: 80%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    box-shadow: 1px 1px 0px 2px black;
+    font-family: monospace;
+    font-size: 12pt;
+
+}
+
+td{
+    padding-left: 8px;
+    margin-left: 6px;
 }
