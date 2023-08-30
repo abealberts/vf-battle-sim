@@ -7,21 +7,29 @@
   .layout {
     display:inline-flex;
     gap: 12px;
+    margin: 0px 12px;
     flex-wrap: wrap;
   }
   
-  .headerlogo{
+  #headerLogoContainer {
+    text-align: center;
+
+  }
+
+  .headerlogo {
       width: 100%;
       padding: 10px 10px 0px 10px;
       margin-left: auto;
       margin-right: auto;
+      vertical-align: middle;
+      max-width: 1000px;
   }
   
-  h1{
+  .headertitle {
       text-align: center;
       margin-left: auto;
       margin-right: auto;
-      margin-top: -2px;
+      margin-top: 2px;
       font-family: monospace;
       font-weight: heavy;
   }
@@ -38,6 +46,42 @@
       box-shadow: 1.5px 1.5px 0px 4px black;
       font-family: monospace;
       font-size:x-large;
+  }
+
+  #battlezone{
+    margin: 0px 12px;
+  }
+
+  #battle{
+    width: 100%;
+  }
+
+  #player{
+    margin-top: 0px;
+  }
+  
+  #actions{
+    margin-top: 0px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  #enemy{
+    margin-top: 0px;
+  }
+
+  #buttonContainer {
+    text-align: center;
+  }
+
+  button {
+    font-family: monospace;
+    font-weight: bold;
+    cursor: pointer;
+    background-image: linear-gradient(to top, #35c9ff45, #fff 50%);
+    box-shadow: 1px 1px 0px 1px;
+    border-radius: 4px;
+
   }
   
   .content{
@@ -90,7 +134,7 @@
   }
 
   .stats{
-    margin: 0px;
+    margin: 0px 12px;
   }
 
   /*CUSTOM SELECT*/
@@ -136,4 +180,20 @@ select {
   height: 0.5em;
   background-color: var(--select-arrow);
   clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+}
+
+footer {
+  color: white;
+  background-color: black;
+  font-family: monospace;
+  border-radius: 4px;
+  height: 24px;
+}
+
+#creditsContainer {
+  vertical-align: middle;
+}
+#credits{
+  text-align: center;
+  padding: 3px;
 }

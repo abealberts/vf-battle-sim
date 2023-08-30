@@ -18,6 +18,19 @@ let player = {
     },
 };
 
+let enemy = {
+    stats: {
+        "maxHp": 100,
+        "currentHp": 100,
+        "damage": 10,
+        "damageM": 10,
+        "defence": 5,
+        "defenceM": 5,
+        "critChance": 0,
+        "dodgeChance": 0,
+        "gold": 50,
+    }
+}
 console.log("Current Player Stats " , player.stats);
 
 let headSlot = {
@@ -96,7 +109,9 @@ let bodySlot = {
 let stats = player.stats;
 
 let elemMaxHp = document.getElementById('maxHp');
+let elemBattleHpMax = document.getElementById('battleHpMax');
 let elemCurrentHp = document.getElementById('currentHp');
+let elemBattleHpCurrent = document.getElementById('battleHpCurrent');
 let elemDamage = document.getElementById('damage');
 let elemDamageM = document.getElementById('damageM');
 let elemDefence = document.getElementById('defence');
@@ -104,6 +119,10 @@ let elemDefenceM = document.getElementById('defenceM');
 let elemCritChance = document.getElementById('critChance');
 let elemDodgeChance = document.getElementById('dodgeChance');
 let elemGold = document.getElementById('gold');
+
+let elemEnemyMaxHp = document.getElementById('enemyMaxHp');
+let elemEnemyCurrentHp = document.getElementById('enemyCurrentHp');
+
 
 // DISPLAY UPDATED STATS
 //https://codereview.stackexchange.com/questions/189754/simple-rpg-game
@@ -118,6 +137,13 @@ function showStats() {
     elemCritChance.textContent = stats.critChance;
     elemDodgeChance.textContent = stats.dodgeChance;
     elemGold.textContent = stats.gold;
+
+    elemBattleHpCurrent.textContent = stats.currentHp;
+    elemBattleHpMax.textContent = stats.maxHp;
+
+    elemEnemyMaxHp.textContent = enemy.stats.maxHp;
+    elemEnemyCurrentHp.textContent = enemy.stats.currentHp;
+
 
     console.log("Current Player Stats " , player.stats);
 }
