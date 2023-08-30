@@ -20,72 +20,81 @@
 
         <main>
 
-            <div class="row">
-                <div class="column">
-                    <h2>Equipment</h2>
-                        <label for="head">Head:</label>
-                        <select name="head" id="head">
-                            <option value="mage-hood">Mage Hood</option>
-                            <option value="thief-cap">Thief Cap</option>
-                            <option value="rune-med">Rune Med Helm</option>
-                        </select>
+            <section id="equipment">
+                <div>
+                    <h3>Equipment</h3>
+                    <label for="head">Head:</label>
+                    <select name="head" id="head">
+                        <option value="empty">Empty</option>
+                        <option value="mage-hood">Mage Hood</option>
+                        <option value="thief-cap">Thief Cap</option>
+                        <option value="rune-med">Rune Med Helm</option>
+                    </select>
 
-                        <label for="body">Body:</label>
-                        <select name="body" id="body">
-                            <option value="mage-robe">Mage Robe</option>
-                            <option value="leather-tunic">Leather Tunic</option>
-                            <option value="rune-chain">Rune Chainbody</option>
-                        </select>
+                    <label for="body">Body:</label>
+                    <select name="body" id="body">
+                        <option value="empty">Empty</option>
+                        <option value="mage-robe">Mage Robe</option>
+                        <option value="leather-tunic">Leather Tunic</option>
+                        <option value="rune-chain">Rune Chainbody</option>
+                    </select>
                         
-                        <label for="legs">Legs:</label>
-                        <select name="legs" id="legs">
-                            <option value="mage-bottoms">Mage Bottoms</option>
-                            <option value="leather-chaps">Leather Chaps</option>
-                            <option value="rune-legs">Rune Platelegs</option>
-                        </select>
+                    <label for="legs">Legs:</label>
+                    <select name="legs" id="legs">
+                        <option value="empty">Empty</option>
+                        <option value="mage-bottoms">Mage Bottoms</option>
+                        <option value="leather-chaps">Leather Chaps</option>
+                        <option value="rune-legs">Rune Platelegs</option>
+                    </select>
 
-                        <label for="main-hand">Main Hand:</label>
-                        <select name="main-hand" id="main-hand">
-                            <option value="mage-wand">Mage's Wand</option>
-                            <option value="knives">Throwing Knives</option>
-                            <option value="magic-dagger">Magic Dagger</option>
-                        </select>
+                    <label for="main-hand">Main Hand:</label>
+                    <select name="main-hand" id="main-hand">
+                        <option value="empty">Empty</option>
+                        <option value="mage-wand">Mage's Wand</option>
+                        <option value="knives">Throwing Knives</option>
+                        <option value="magic-dagger">Magic Dagger</option>
+                    </select>
 
-                        <label for="off-hand">Off Hand:</label>
-                        <select name="off-hand" id="off-hand">
-                            <option value="spellbook">Scholar's Spellbook</option>
-                            <option value="parry-dagger">Parrying Dagger</option>
-                            <option value="shield">Leather Buckler</option>
-                        </select>
+                    <label for="off-hand">Off Hand:</label>
+                    <select name="off-hand" id="off-hand">
+                        <option value="empty">Empty</option>
+                        <option value="spellbook">Scholar's Spellbook</option>
+                        <option value="parry-dagger">Parrying Dagger</option>
+                        <option value="shield">Leather Buckler</option>
+                    </select>
 
-                        <label for="ring">Ring:</label>
-                        <select name="ring" id="ring">
-                            <option value="magic-ring">Enchanted Ring</option>
-                            <option value="defence-ring">Ring of Stone</option>
-                            <option value="dodge-ring">Ring of Stealth</option>
-                        </select>
+                    <label for="ring">Ring:</label>
+                    <select name="ring" id="ring">
+                        <option value="empty">Empty</option>
+                        <option value="magic-ring">Enchanted Ring</option>
+                        <option value="defence-ring">Ring of Stone</option>
+                        <option value="dodge-ring">Ring of Stealth</option>
+                    </select>
 
-                        <label for="amulet">Amulet:</label>
-                        <select name="amulet" id="amulet">
-                            <option value="attack-amulet">Amulet of Fury</option>
-                            <option value="magic-amulet">Shard of the Flame</option>
-                            <option value="tank amulet">Eye of Danudor</option>
-                        </select>
+                    <label for="amulet">Amulet:</label>
+                    <select name="amulet" id="amulet">
+                        <option value="empty">Empty</option>
+                        <option value="attack-amulet">Amulet of Fury</option>
+                        <option value="magic-amulet">Shard of the Flame</option>
+                        <option value="tank amulet">Eye of Danudor</option>
+                    </select>
+                </div>
+            </section>
+
+            <section id="stats">
+                <div>
+                    <h3>Stats</h3>
+                    <p>HP: <span id="currentHp"></span>/<span id="maxHp"></span></p>    
+                    <p>Attack Power: <span id="damage"></span></p>
+                    <p>Magic Attack Power: <span id="damageM"></span></p>
+                    <p>Physical Defense: <span id="defense"></span></p>
+                    <p>Magic Defense: <span id="defenseM"></span></p>
+                    <p>Crit Rate: <span id="critChance"></span></p>
+                    <p>Dodge: <span id="dodgeChance"></span></p>
+                    <p>Gold: <span id="gold"></span></p>
                 </div>
 
-                <div class="column">
-                    <h2>Player Stats</h2>
-                    <ul>
-                        <li>HP:</li>
-                        <li>Attack:</li>
-                        <li>Magic Attack:</li>
-                        <li>Defense:</li>
-                        <li>Magic Defense:</li>
-                        <li>Crit Rate:</li>
-                        <li>Dodge:</li>
-                    </ul>
-                </div>
-            </div>
+            </section>
 
             <div>
                 <h2>Battle</h2>
