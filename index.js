@@ -18,10 +18,11 @@ let player = {
     },
 };
 
-//shortcuts
-let stats = player.stats
+console.log("Current Player Stats " , player.stats);
 
-//Gets DOM elements into variables once; not every time they need to be accessed.
+//shortcuts
+let stats = player.stats;
+
 let elemMaxHp = document.getElementById('maxHp');
 let elemCurrentHp = document.getElementById('currentHp');
 let elemDamage = document.getElementById('damage');
