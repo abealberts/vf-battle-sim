@@ -256,3 +256,4 @@ console.log(mainHand.options[mainHand.selectedIndex].value);
 console.log(offHand.options[offHand.selectedIndex].value);
 console.log(ring.options[ring.selectedIndex].value);
 console.log(amulet.options[amulet.selectedIndex].value);
+
